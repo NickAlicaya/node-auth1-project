@@ -83,7 +83,7 @@ function restrict(req, res,next) {
     }
 }
 
-server.get('api/user',restrict, (req,res) => {
+server.get('/api/user',restrict, (req,res) => {
     Users.find()
         .then(users => {
             res.json(users)
